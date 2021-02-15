@@ -1,0 +1,10 @@
+{
+  "config": "qa",
+  "rpcEndpoints": ["http://chain.beta.utu.one:18890"],
+  "accounts": {
+    "acctsmanager": {
+      "account_name": "acctsmanager",
+      "privkey": "5JUzsJi7rARZy2rT5eHhcdUKTyVPvaksnEKtNWzyiBbifJA1dUW"
+    }
+  }
+}

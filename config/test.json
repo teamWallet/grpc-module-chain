@@ -1,0 +1,9 @@
+{
+  "rpcEndpoints": ["http://localhost:8888"],
+  "accounts": {
+    "acctsmanager": {
+      "account_name": "acctsmanager",
+      "privkey": "5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "app": {
+    "logger": {
+      "level": "debug",
+      "path": "./../log/"
+    },
+    "port": "50052",
+    "address": "0.0.0.0"
+  },
+  "grpc": {
+    "package": "utu_module_chain",
+    "proto_path": "../src/protobufs/utu-module-chain.proto"
+  },
+  "rpcEndpoints": ["http://52.63.253.74:18890"],
+  "accounts": {
+    "acctsmanager": {
+      "account_name": "acctsmanager",
+      "privkey": "5JUzsJi7rARZy2rT5eHhcdUKTyVPvaksnEKtNWzyiBbifJA1dUW"
+    }
+  }
+}

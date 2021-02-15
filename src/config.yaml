@@ -1,0 +1,40 @@
+etcd:
+  hosts: 52.194.214.129:12379
+service:
+  discoveryHost: localhost
+  id: 1
+  name: utu-module-chain
+  port: 50052
+  healthPort: 10052
+  tags: ['v0.0.1']
+  healthCheck:
+    # for etcd
+    ttl: 20
+  maxRetry: 5000
+  retryInterval: 5000
+config:
+  name: ${{ service.name }}-config
+  key: utu-module-chain-conf
+logger:
+  level: debug
+  transports:
+    - transport: console
+      level: debug
+      colorize: true
+      datePattern: YYYY-MM-DD h:mm:ss
+      label: ${{ service.name }}
+    - transport: file
+      name: info
+      filename: ../logs/chain.log
+      datePattern: YYYY-MM-DD h:mm:ss
+      label: ${{ service.name }}
+      # 100M
+      maxSize: 104857600
+      json: false
+      maxFiles: 10
+    - transport: dailyRotateFile
+      filename: ../logs/chain_daily_rotate.log
+      datePattern: YYYY-MM-DD h:mm:ss
+      zippedArchive: true
+      maxSize: 20m
+      maxFiles: 14d
